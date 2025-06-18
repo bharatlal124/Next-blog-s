@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 export const runtime = "edge";
 
-export default async function SinglePostPage({ Params }) {
+export default async function SinglePostPage() {
      const { id } = Params;
   return (
     <>
