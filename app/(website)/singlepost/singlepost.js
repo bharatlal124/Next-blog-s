@@ -3,7 +3,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { format, parseISO } from "date-fns";
 
 import { useRouter } from "next/router";
