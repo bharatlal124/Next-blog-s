@@ -121,10 +121,10 @@ export default function PostList({
               <Link href={`/author/${post?.author?.slug?.current}`}>
                 <div className="flex items-center gap-3">
                   <div className="relative h-5 w-5 flex-shrink-0">
-                    {post?.author?.image && (
+                    {post?.authorImage && (
                       <Image
-                        src={AuthorimageProps.src}
-                        alt={post?.author?.name}
+                        src={post.authorImage}
+                        alt={post.authorImage}
                         className="rounded-full object-cover"
                         fill
                         sizes="20px"
@@ -132,7 +132,7 @@ export default function PostList({
                     )}
                   </div>
                   <span className="truncate text-sm">
-                    {post?.author?.name}
+                    {post?.authorname}
                   </span>
                 </div>
               </Link>
