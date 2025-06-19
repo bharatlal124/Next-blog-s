@@ -45,7 +45,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
-            {posts.slice(0, 6).map(post => (
+            {posts.slice(0, 8).map(post => (
               <PostList key={post._id} post={post} aspect="square" />
             ))}
           </div>
