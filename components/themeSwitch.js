@@ -1,34 +1,46 @@
-"use client";
+'use client'
 
-import { useTheme } from "next-themes";
-import { SunIcon } from "@heroicons/react/24/outline";
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
+import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline'
 
 const ThemeSwitch = () => {
-  //   const [mounted, setMounted] = useState(false);
-  //   const { resolvedTheme, setTheme } = useTheme();
-  const { theme, setTheme } = useTheme();
-  // useEffect only runs on the client, so now we can safely show the UI
-  //   useEffect(() => {
-  //     setMounted(true);
-  //   }, []);
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
-  //   if (!mounted) {
-  //     return null;
-  //   }
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  const themes = ['system', 'dark', 'light']
+  const cycleTheme = () => {
+    const currentIndex = themes.indexOf(theme || 'system')
+    const nextTheme = themes[(currentIndex + 1) % themes.length]
+    setTheme(nextTheme)
+  }
+
+  const getIcon = () => {
+    switch (theme) {
+      case 'dark':
+        return <MoonIcon className="w-5 h-5" />
+      case 'light':
+        return <SunIcon className="w-5 h-5" />
+      default:
+        return <ComputerDesktopIcon className="w-5 h-5" />
+    }
+  }
 
   return (
-    <div className="inline-flex items-center">
-      <SunIcon className="w-4 h-4 mr-2" />
-      <select
-        name="themeSwitch"
-        value={theme}
-        onChange={e => setTheme(e.target.value)}>
-        <option value="system">System</option>
-        <option value="dark">Dark</option>
-        <option value="light">Light</option>
-      </select>
-    </div>
-  );
-};
+    <button
+      onClick={cycleTheme}
+      className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-sm"
+    >
+      {getIcon()}
+      <span className="ml-2 capitalize">{theme}</span>
+    </button>
+  )
+}
 
-export default ThemeSwitch;
+export default ThemeSwitch
