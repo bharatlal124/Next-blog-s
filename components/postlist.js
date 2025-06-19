@@ -132,7 +132,7 @@ export default function PostList({
                     )}
                   </div>
                   <span className="truncate text-sm">
-                    {post?.authorname}
+                    {post?.authorName}
                   </span>
                 </div>
               </Link>
