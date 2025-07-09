@@ -71,8 +71,8 @@ export default function PostList({
 
         <div className={cx(minimal && "flex items-center")}>
           <div>
-            <CategoryLabel
-              categories={post.categories}
+             <CategoryLabel
+              categories={post.category}
               nomargin={minimal}
             />
             <h2
