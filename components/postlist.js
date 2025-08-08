@@ -88,7 +88,7 @@ export default function PostList({
                 "mt-2    dark:text-white"
               )}>
               <Link
-                href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
+                href={`/singlepost/${pathPrefix ? `${pathPrefix}/` : ""}${
                   post.slug?.current || post._id
                 }`}>
                 <span
