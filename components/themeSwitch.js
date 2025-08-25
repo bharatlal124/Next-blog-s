@@ -14,7 +14,7 @@ const ThemeSwitch = () => {
 
   if (!mounted) return null
 
-  const themes = ['system', 'dark', 'light']
+  const themes = ['system', 'light', 'dark']
   const cycleTheme = () => {
     const currentIndex = themes.indexOf(theme || 'system')
     const nextTheme = themes[(currentIndex + 1) % themes.length]
