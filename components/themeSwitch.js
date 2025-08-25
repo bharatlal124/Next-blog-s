@@ -23,9 +23,9 @@ const ThemeSwitch = () => {
 
   const getIcon = () => {
     switch (theme) {
-      case 'light':
-        return <MoonIcon className="w-5 h-5" />
       case 'dark':
+        return <MoonIcon className="w-5 h-5" />
+      case 'light':
         return <SunIcon className="w-5 h-5" />
       default:
         return <ComputerDesktopIcon className="w-5 h-5" />
