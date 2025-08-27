@@ -8,21 +8,28 @@ const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
+  const themes = ['system', 'light', 'dark']
+
   useEffect(() => {
     setMounted(true)
   }, [])
 
   if (!mounted) return null
 
-  const themes = ['system', 'light', 'dark']
-  const cycleTheme = () => {
+  // Determine next theme
+  const getNextTheme = () => {
     const currentIndex = themes.indexOf(theme || 'system')
-    const nextTheme = themes[(currentIndex + 1) % themes.length]
-    setTheme(nextTheme)
+    return themes[(currentIndex + 1) % themes.length]
   }
 
-  const getIcon = () => {
-    switch (theme) {
+  // Cycle theme
+  const cycleTheme = () => {
+    setTheme(getNextTheme())
+  }
+
+  // Icon for next theme
+  const getNextThemeIcon = () => {
+    switch (getNextTheme()) {
       case 'dark':
         return <MoonIcon className="w-5 h-5" />
       case 'light':
@@ -37,8 +44,8 @@ const ThemeSwitch = () => {
       onClick={cycleTheme}
       className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-sm"
     >
-      {getIcon()}
-      <span className="ml-2 capitalize">{theme}</span>
+      {getNextThemeIcon()}
+      <span className="ml-2 capitalize">{getNextTheme()}</span>
     </button>
   )
 }
