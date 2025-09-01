@@ -83,33 +83,28 @@ export default function Navbar(props) {
                   ))}
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
-                  <Link href="/" className="w-28 dark:hidden">
-                    {props.logo ? (
-                      <Image
-                        {...urlForImage(props.logo)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        logo
-                      </span>
-                    )}
-                  </Link>
-                  <Link href="/" className="hidden w-28 dark:block">
-                    {props.logoalt ? (
-                      <Image
-                        {...urlForImage(props.logoalt)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        logo
-                      </span>
-                    )}
+                  <Link href="/" className="w-28 flex justify-center">
+                    {/* Light Mode Logo */}
+                    <Image
+                      src="/symbols.png"
+                      alt="Logo"
+                      width={40}   // Example: matches w-28 (28 * 4 = 112px)
+                      height={40}
+                      priority
+                      sizes="(max-width: 640px) 100vw, 200px"
+                      className="block dark:hidden"
+                    />
+
+                    {/* Dark Mode Logo */}
+                    <Image
+                      src="/symbols (1).png"
+                      alt={props.logoalt || "Logo"}
+                      width={40}   // Example: matches w-28 (28 * 4 = 112px)
+                      height={40}
+                      priority
+                      sizes="(max-width: 640px) 100vw, 200px"
+                      className="hidden dark:block"
+                    />
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
