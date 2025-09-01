@@ -13,7 +13,7 @@ export default function About({ authors, settings }) {
         <p className="text-lg">We are a small passionate team.</p>
       </div>
 
-       <div className="flex items-center justify-center h-screen">
+       <div className="flex items-center justify-center">
   <div className="w-72 h-72 rounded-full overflow-hidden">
     <Image
       src="/about-img2.jpg"  
