@@ -1,4 +1,4 @@
-﻿# Stablo Blog Template
+﻿# NextJS Blog Site
 
 <img width="1257" height="692" alt="Image" src="https://github.com/user-attachments/assets/234dd1fe-e34c-40d5-956f-d880c9dd3b59" />
 
