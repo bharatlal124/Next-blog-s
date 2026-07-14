@@ -1,6 +1,6 @@
 ﻿# Stablo Blog Template
 
-![Stablo Blog Preview](./public/opengraph.jpg)
+<img width="1257" height="692" alt="Image" src="https://github.com/user-attachments/assets/234dd1fe-e34c-40d5-956f-d880c9dd3b59" />
 
 A modern blog template built with **Next.js**, **Tailwind CSS**, and **Sanity CMS**. This repo includes a responsive blog website, dynamic post pages, archive layout, contact page, and a Sanity Studio setup for content editing.
 
@@ -55,9 +55,14 @@ This project is a ready-to-use blog template designed for developers and content
 
 Below are screenshots from the project preview:
 
-![Homepage Preview](./public/opengraph.jpg)
+- Home Page
+<img width="1265" height="689" alt="Image" src="https://github.com/user-attachments/assets/6254c12c-3bd0-4375-852f-25683fd1ac2c" />
 
-![Blog Archive Preview](./public/about-img2.jpg)
+- Archive Page
+<img width="1257" height="692" alt="Image" src="https://github.com/user-attachments/assets/c77f6b06-ccc0-4f46-ab50-b237c0df3142" />
+
+- Contact page
+<img width="1256" height="692" alt="Image" src="https://github.com/user-attachments/assets/0f13c796-3098-4f21-81b1-3394f50e08e3" />
 
 
 
