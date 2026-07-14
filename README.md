@@ -153,6 +153,4 @@ Feel free to customize styles, add new pages, or extend Sanity schemas. Pull req
 
 ---
 
-## License
-
-This repository is provided as a starter template. Update the license section if you choose a specific license for your project.
+ 
