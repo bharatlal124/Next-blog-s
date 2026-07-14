@@ -1,206 +1,153 @@
-# Stablo Blog Template - Next.js & Sanity CMS
+﻿# Stablo Blog Template
 
-Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS by [Web3Templates](https://web3templates.com/). It comes with free & pro version.
+![Stablo Blog Preview](./public/opengraph.jpg)
 
-## [Installation ↓](#installation)
+A modern blog template built with **Next.js**, **Tailwind CSS**, and **Sanity CMS**. This repo includes a responsive blog website, dynamic post pages, archive layout, contact page, and a Sanity Studio setup for content editing.
 
-## Live Demo
+## Overview
 
-**[Free Version Demo →](https://stablo.web3templates.com/)**
+This project is a ready-to-use blog template designed for developers and content creators. It supports fast page rendering, SEO-friendly structure, and a flexible CMS backend powered by Sanity.
 
-**[Pro Version Demo →](https://stablo-pro.web3templates.com/)**
+## Preview
+
+- Responsive homepage with featured posts
+- Archive page for browsing all posts
+- Blog post pages with author metadata
+- Contact page UI
+- Local Sanity Studio for content management
 
 ## Features
 
-<!-- prettier-ignore -->
-| Feature | Free Version | Pro Version |
-| --- | ------ | --- |
-| Next.js v13 | ✅  | ✅ |
-| /app Directory | ✅  | ✅ |
-| Tailwind CSS   | ✅  | ✅ |
-| Sanity CMS (v3) | ✅  | ✅ |
-| Mobile Responsive | ✅  | ✅ |
-| Dark & Light Mode | ✅  | ✅ |
-| Working Contact Page | ✅  | ✅ |
-| Archive (Pagination) | ✅  | ✅ |
-| Category Pages  | ❌  | ✅ |
-| Author Pages    | ❌  | ✅ |
-| Search Page     | ❌  | ✅ |
-| Homepage - Default | ✅  | ✅ |
-| Homepage - Alternate       | ❌  | ✅ |
-| Homepage - Minimal | ❌  | ✅ |
-| Homepage - Lifestlye       | ❌  | ✅ |
-| Homepage - Two Column      | ❌  | ✅ |
-| Blog Post - Default        | ✅  | ✅ |
-| Blog Post - Minimal        | ❌  | ✅ |
-| Blog Post - Lifestlye      | ❌  | ✅ |
-| Blog Post - with Sidebar   | ❌  | ✅ |
-| 6 Months Support| ❌  | ✅  |
-| Free Updates    | ✅  | ✅  |
-| License         | GPL-2.0 | Commercial |
-| &nbsp; | &nbsp;| &nbsp;|
-| Pricing| Free|**$49**|
-| &nbsp; | [Deploy for free](https://vercel.com/new/web3templates/clone?demo-title=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&demo-description=A%20minimal%20blog%20website%20template%20built%20with%20Next.js%2C%20TailwindCSS%20%26%20Sanity%20CMS%0A&demo-url=https%3A%2F%2Fstablo-template.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F6p72KDrdJ8SjyvOBrgRbnr%2F0760db43f2cb08504a2f67601e74d986%2FCleanShot_2022-07-15_at_16.54.17.png&project-name=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&repository-name=stablo-blog&repository-url=https%3A%2F%2Fgithub.com%2Fweb3templates%2Fstablo&from=templates&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx) | [Purchase Pro](https://web3templates.com/templates/stablo-minimal-blog-website-template) |
+- Responsive design with Tailwind CSS
+- Next.js App Router structure
+- Dynamic blog post routing
+- Sanity CMS v3 integration
+- SEO and sitemap support
+- Reusable component architecture
+- Dark/light mode UI support
+- Contact page layout
+- Local development environment ready
 
-<a href="https://web3templates.com/templates/stablo-minimal-blog-website-template">
-<img width="160" alt="Upgrade to Pro" src="https://user-images.githubusercontent.com/1884712/199181300-37c2128e-d033-4145-a906-16fa5263a53b.png">
-</a>
+## Tech Stack
 
-###### Click the above button for one-click clone & deploy for this template. Read [quick start](#quick-start) guide below.
+- **Next.js 14**
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Sanity CMS v3**
+- **next-sitemap**
+- **next-seo**
+- **styled-components**
+- **SWR**
+- **@headlessui/react**
+- **@heroicons/react**
 
-#### Template Preview
+## Project Structure
 
-[![Next.js Front-end Preview](https://user-images.githubusercontent.com/1884712/169838344-e32b7426-621a-45a4-aba8-afedf3377e1f.jpeg)](https://web3templates.com/preview/stablo)
+- `app/` – application routes, pages, and Sanity Studio wrapper
+- `components/` – reusable UI and layout components
+- `lib/` – Sanity client, config, queries, and schema definitions
+- `public/` – static assets, images, and fonts
+- `styles/` – global Tailwind and Prism styles
+- `utils/` – utility functions
 
-#### Sanity CMS Preview
+## Screenshots
 
-![Backend Sanity CMS Preview](https://user-images.githubusercontent.com/1884712/170030678-c6e32d47-0b92-42b7-ac2d-f3cf800c0969.png)
+Below are screenshots from the project preview:
 
-# Installation
+![Homepage Preview](./public/opengraph.jpg)
 
-## Step 1: Deploy to Vercel
-
-Use the Deploy Button below. It will let you deploy the starter using Vercel as well as connect it to your Sanity Studio using the Sanity Vercel Integration.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/web3templates/clone?demo-title=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&demo-description=A%20minimal%20blog%20website%20template%20built%20with%20Next.js%2C%20TailwindCSS%20%26%20Sanity%20CMS%0A&demo-url=https%3A%2F%2Fstablo-template.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F6p72KDrdJ8SjyvOBrgRbnr%2F0760db43f2cb08504a2f67601e74d986%2FCleanShot_2022-07-15_at_16.54.17.png&project-name=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&repository-name=stablo-blog&repository-url=https%3A%2F%2Fgithub.com%2Fweb3templates%2Fstablo&from=templates&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx)
-
-**The above deploy will automatically configure the following:**
-
-- Create new Repository in Github
-- Create a Sanity Project
-- Install Sanity Integration in Vercel
-- Add required CORS & API settings in the project
-- Deploy Frontend to Vercel
-
-Alternatively, you can deploy to other services such as Netlify or Cloudflare Pages or AWS Amplify.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/web3templates/stablo/)
+![Blog Archive Preview](./public/about-img2.jpg)
 
 
-## Step 2: Set up the project locally.
 
-Once you have deployed the website, it will look like empty or not configured properly. This is expected. We need to do few more steps to make it as seen on the demo.
+## Getting Started
 
-First, clone the github repository vercel created into your local machine. Use the following command structure. Make sure the terminal is on the right folder before executing this command.
+### Prerequisites
+
+- Node.js 18 or newer
+- `pnpm` package manager
+
+### Clone the repository
 
 ```bash
-git clone https://github.com/<usename>/<repo>.git your-project-name
+git clone https://github.com/bharatlal124/Next-blog-s.git
+cd Next-blog-s
 ```
 
-Once cloned, run the following command from the project's root directory. This will link your vercel project.
+### Install dependencies
 
 ```bash
-npx vercel link
-```
-
-Now, run the following command to pull the `.env` variables to your local system.
-
-```bash
-npx vercel env pull
-```
-
-Now you can see that a new `.env.local` file has been created. If this doesn't work, you can also rename the `.env.local.example` to `.env.local` and add the Sanity Project ID manually.
-
-Now, you can open your code editor (if not already) we prefer VSCode. The run the command in the integrated terminal inside the code editor.
-
-```bash
-npm install
-# or
-yarn install
-# or
 pnpm install
 ```
 
-We prefer `pnpm` to save your disk space.
+### Configure environment variables
 
-## Step 3: Import Demo Data (Optional)
-
-To look like what you have seen in the demo, with all the content and images, follow the below steps:
-
-1. if you have not installed `@sanity/cli` install it globally first.
+Copy the example environment file:
 
 ```bash
-npm install -g @sanity/cli
-# or
-pnpm install -g @sanity/cli
+cp .env.local.example .env.local
 ```
 
-Then login to sanity using `sanity login` command
+On Windows PowerShell:
 
-```
-sanity login
+```powershell
+Copy-Item .env.local.example .env.local
 ```
 
-Now, you will be able to import demo content by running the `sanity-import` command. The files are located at `/lib/sanity/data/production.tar.gz` and will load automatically by running the below command.
+Then open `.env.local` and add your Sanity project settings.
+
+### Run locally
 
 ```bash
-npm run sanity-import
-# or
-pnpm sanity-import
-```
-
-## Step 4: Finish it up!
-
-Now, run your project using the below command.
-
-```bash
-npm run dev
-# or
 pnpm dev
 ```
 
-Now your project should be up and the Next.js frontend will be running on http://localhost:3000.
+Open your browser at:
 
-Sanity Studio can be accessed using http://localhost:3000/studio or you can run it on a separate https://localhost:3333 server using the following command.
+```text
+http://localhost:3000
+```
+
+### Start Sanity Studio
 
 ```bash
-npm run sanity
-# or
 pnpm sanity
 ```
 
-## Step 5. Redploy
+Then open the local Studio URL shown in the terminal.
 
-Once all of the above changes is made, make sure to redeploy to vercel once again to see all of your changes in production.
+## Optional: Import Demo Content
 
-You can `git push` the changes and it should automatically trigger a new deployment. If not, you can also deploy to vercel using the following command.
+If sample content is available in `lib/sanity/data/production.tar.gz`, import it with:
 
-```
-npx vercel --prod
-```
-
-# Manual Installation
-
-We recommend you to use the one-click deploy option above. For some reason, if you cannot, use the following steps to install it manually.
-
-## Step 1. Clone the Repo
-
-Clone the github repo or use the downloaded files in your local machine.
-
-## Step 2. Setup `.env` Variables.
-
-Open the project folder and rename `.env.local.example` placed in the root folder into `.env.local` and add your sanity project ID. You can create a new project by visiting this link: https://www.sanity.io/get-started/create-project
-
-If you already have a project, copy the project ID from https://sanity.io/manage
-
-```
-NEXT_PUBLIC_SANITY_PROJECT_ID=xxyyzz
+```bash
+pnpm sanity-import
 ```
 
-## Step 3. Allow CORS Origins
+## Build for production
 
-To make the studio work properly, you must add CORS origin in Sanity. This is usually setup automatically if you are using the Vercel Deploy. Visit `https://www.sanity.io/manage/personal/project/<project-id>/api` in your browser to add CORS origin.
+```bash
+pnpm build
+pnpm start
+```
 
-Click `Add CORS origin` button and enter the URL as `http://localhost:3000` and check the Allow credentials checkbox.
+## Notes
 
-## Step 4 Continue from above steps
+- This repository is configured for `pnpm` by default.
+- You can also use `npm` or `yarn` if preferred:
+  - `npm install`
+  - `npm run dev`
+  - `yarn install`
+  - `yarn dev`
+- Make sure `.env.local` contains valid Sanity credentials before running the app.
 
-Now, you will be able continue from the above instructions to import the demo data and running the project locally.
+## Contribution
 
-## Help and Support
+Feel free to customize styles, add new pages, or extend Sanity schemas. Pull requests and issues are welcome.
 
-Something's not working as expected? Raise a github issue. If you need personalized support or help, please consider purchasing the Pro version and we will assist you over email.
+---
 
-## Sponsor
+## License
 
-<a href="https://vercel.com/?utm_source=web3templates&amp;utm_campaign=oss" rel="nofollow"><img src="https://camo.githubusercontent.com/37b009b52b3a9af7886f52e75cd76d1b32fef331ab1dc2108089c0ced0b7635f/68747470733a2f2f7777772e6461746f636d732d6173736574732e636f6d2f33313034392f313631383938333239372d706f77657265642d62792d76657263656c2e737667" alt="image" style="max-width: 70%;"></a>
+This repository is provided as a starter template. Update the license section if you choose a specific license for your project.
